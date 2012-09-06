@@ -37,6 +37,9 @@
 		B2DB8AE015F8575C0017174D /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = B2DB8ACE15F8575C0017174D /* SBJsonUTF8Stream.m */; };
 		B2DB8AE115F8575C0017174D /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = B2DB8AD015F8575C0017174D /* SBJsonWriter.m */; };
 		B2DB8AE315F85C2B0017174D /* process.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2DB8AE215F85C2B0017174D /* process.plist */; };
+		B2DB8AF015F868CC0017174D /* AppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2DB8AEE15F868CC0017174D /* AppViewController.m */; };
+		B2DB8AF915F869100017174D /* AppViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2DB8AF515F869100017174D /* AppViewController_iPad.xib */; };
+		B2DB8AFA15F869100017174D /* AppViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2DB8AF715F869100017174D /* AppViewController_iPhone.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +101,10 @@
 		B2DB8ACF15F8575C0017174D /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		B2DB8AD015F8575C0017174D /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		B2DB8AE215F85C2B0017174D /* process.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = process.plist; sourceTree = "<group>"; };
+		B2DB8AED15F868CC0017174D /* AppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppViewController.h; sourceTree = "<group>"; };
+		B2DB8AEE15F868CC0017174D /* AppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppViewController.m; sourceTree = "<group>"; };
+		B2DB8AF615F869100017174D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/AppViewController_iPad.xib; sourceTree = "<group>"; };
+		B2DB8AF815F869100017174D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/AppViewController_iPhone.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +180,10 @@
 				B271C84015F7B21200E8BE05 /* ViewController.m */,
 				B271C84215F7B21200E8BE05 /* ViewController_iPad.xib */,
 				B278068315F852260050ADE4 /* ViewController_iPhone.xib */,
+				B2DB8AED15F868CC0017174D /* AppViewController.h */,
+				B2DB8AEE15F868CC0017174D /* AppViewController.m */,
+				B2DB8AF515F869100017174D /* AppViewController_iPad.xib */,
+				B2DB8AF715F869100017174D /* AppViewController_iPhone.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -299,6 +310,8 @@
 				B278068515F852260050ADE4 /* ViewController_iPhone.xib in Resources */,
 				B2DB8AD215F8575C0017174D /* FBDialog.bundle in Resources */,
 				B2DB8AE315F85C2B0017174D /* process.plist in Resources */,
+				B2DB8AF915F869100017174D /* AppViewController_iPad.xib in Resources */,
+				B2DB8AFA15F869100017174D /* AppViewController_iPhone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +344,7 @@
 				B2DB8ADF15F8575C0017174D /* SBJsonTokeniser.m in Sources */,
 				B2DB8AE015F8575C0017174D /* SBJsonUTF8Stream.m in Sources */,
 				B2DB8AE115F8575C0017174D /* SBJsonWriter.m in Sources */,
+				B2DB8AF015F868CC0017174D /* AppViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +373,22 @@
 				B278068415F852260050ADE4 /* en */,
 			);
 			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		B2DB8AF515F869100017174D /* AppViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2DB8AF615F869100017174D /* en */,
+			);
+			name = AppViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		B2DB8AF715F869100017174D /* AppViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2DB8AF815F869100017174D /* en */,
+			);
+			name = AppViewController_iPhone.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
