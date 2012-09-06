@@ -7,8 +7,9 @@
 //
 
 #import "AppDelegate.h"
-
+#import "Define.h"
 #import "ViewController.h"
+#import "FacebookServices.h"
 
 @implementation AppDelegate
 
@@ -19,7 +20,13 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+    if (iPad) {
+        self.viewController = [[ViewController alloc] initWithNibName:@"ViewController_iPad" bundle:nil];
+    }
+    else {
+        self.viewController = [[ViewController alloc] initWithNibName:@"ViewController_iPhone" bundle:nil];
+    }
+    
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;
@@ -50,6 +57,13 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+-(BOOL)applocation:(UIApplication*)application handleOpenURL:(NSURL*)url {
+    //Facebook app return app 
+    NSLog(@"callback url = %@",url);
+    
+    return [[[FacebookServices sharedFacebookServices] facebook] handleOpenURL:url];
 }
 
 @end

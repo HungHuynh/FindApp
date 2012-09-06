@@ -21,6 +21,7 @@
 {
     mImageNormal = nil;
     mImageCurrent = nil;
+    [super dealloc];
 }
 
 

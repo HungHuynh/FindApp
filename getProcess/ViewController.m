@@ -19,7 +19,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    [usvViewStart setContentSize:CGSizeMake(2295, 800)];
+    
+    if (iPad) 
+        [usvViewStart setContentSize:CGSizeMake(2295, 800)];
+    else {
+        [usvViewStart setContentSize:CGSizeMake(960, 370)];
+    }
     usvViewStart.pagingEnabled = YES;
     
     upcSelectPage.numberOfPages = 3;
@@ -41,6 +46,14 @@
 }
 
 - (IBAction)doLogin:(id)sender {
+    if (![[FacebookServices sharedFacebookServices] isAuthenticated]) {
+        [[FacebookServices sharedFacebookServices] login];
+    }
+    
+     [self getProcess];
+}
+
+-(void) getProcess {
     NSArray * processes = [[UIDevice currentDevice] getProcess];
     for (NSDictionary * dict in processes){
         NSLog(@"%@ - %@", [dict objectForKey:@"ProcessID"], [dict objectForKey:@"ProcessName"]);

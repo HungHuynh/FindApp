@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "GetProcess.h"
+#import "Define.h"
+#import "FacebookServices.h"
 
 @interface ViewController : UIViewController <UIScrollViewDelegate>{
     
