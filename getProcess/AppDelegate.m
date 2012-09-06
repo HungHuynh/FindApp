@@ -59,11 +59,16 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
--(BOOL)applocation:(UIApplication*)application handleOpenURL:(NSURL*)url {
+-(BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
     //Facebook app return app 
     NSLog(@"callback url = %@",url);
     
     return [[[FacebookServices sharedFacebookServices] facebook] handleOpenURL:url];
+}
+
+-(void)goMainView {
+    appView = [[AppViewController alloc] initWithNibName:@"AppViewController_iPhone" bundle:nil];
+    self.window.rootViewController = appView;
 }
 
 @end

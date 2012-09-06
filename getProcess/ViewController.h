@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "GetProcess.h"
+#import "AppDelegate.h"
 #import "Define.h"
 #import "FacebookServices.h"
 

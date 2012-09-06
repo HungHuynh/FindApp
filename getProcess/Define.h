@@ -9,7 +9,8 @@
 #ifndef getProcess_Define_h
 #define getProcess_Define_h
 
-#define iPad [UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad
+#define     iPad                            [UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad
+#define     appdelegate                     [[UIApplication sharedApplication] delegate]
 
 //Facebook 
 #define     FacebookApplicationId           @"133890630091013"

@@ -69,6 +69,8 @@
                     //[processID release];
                     //[processName release];
                     //[dict release];
+                    
+                    NSLog(@"%@ %@",processID,processName);
                 }
                 
                 free(process);

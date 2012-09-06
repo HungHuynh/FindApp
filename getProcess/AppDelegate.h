@@ -7,13 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppViewController.h"
 
 @class ViewController;
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate> {
+    AppViewController *appView;
+}
 
 @property (strong, nonatomic) UIWindow *window;
-
 @property (strong, nonatomic) ViewController *viewController;
+
+-(void)goMainView;
 
 @end

@@ -49,8 +49,12 @@
     if (![[FacebookServices sharedFacebookServices] isAuthenticated]) {
         [[FacebookServices sharedFacebookServices] login];
     }
+    else {
+        AppDelegate *appDele = [[UIApplication sharedApplication] delegate];
+        [appDele goMainView];
+    }
     
-     [self getProcess];
+    //[self getProcess];
 }
 
 -(void) getProcess {
